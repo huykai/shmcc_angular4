@@ -1,0 +1,11 @@
+{
+    "api_function" : {
+        "ALARM_QUERY" : {
+            "function_string" : "xxxxxx",
+            "start" : false,
+            "period" : 300,
+            "hasSocket" : false,
+            "parameters" : ""
+        }
+    }
+}

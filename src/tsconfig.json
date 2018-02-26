@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "noEmitHelpers": true,
+      "lib": ["es6", "dom"],
+      "mapRoot": "./",
+      "module": "es6",
+      "moduleResolution": "node",
+      "outDir": "../temp/out-tsc",
+      "sourceMap": true,
+      "target": "es5",
+      "baseUrl": ".",
+      "allowJs": true,
+      "paths": {
+        "@goldsam/ng-golden-layout": [
+          "../../dist/index"
+        ]
+      }
+    }
+  }
