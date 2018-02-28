@@ -59,9 +59,10 @@ import { TabContentService } from '../services/TabContentService';
         {
           'type' : 'telnet',
           'name' : 'SHMME03BNK',
-          //'address': '172.20.13.28',
-          'host' : '127.0.0.1',
-          'port' : '51004',
+          'host' : '172.20.13.28',
+          //'host' : '127.0.0.1',
+          //'port' : '51004',
+          'port' : '23',
           'login': [
             { prompt: 'USERNAME', answer: 'NOKIA1\r' },
             { prompt: 'PASSWORD', answer: 'NOKIA2016\r' }
