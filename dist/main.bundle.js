@@ -1653,9 +1653,9 @@ var SideBarComponent = (function () {
             {
                 'type': 'ssh',
                 'name': 'SHSAEGW03BNK',
-                //'address': '172.20.13.28',
-                'host': '127.0.0.1',
-                'port': '51008',
+                'host': '172.20.13.28',
+                //'host' : '127.0.0.1',
+                'port': '22',
                 'user': 'nokia1',
                 'login': [
                     { prompt: 'password:', answer: 'qz76gprs\n' }
@@ -1677,9 +1677,9 @@ var SideBarComponent = (function () {
             {
                 'type': 'ssh',
                 'name': 'SHCG17BNK-1',
-                //'address': '172.20.13.28',
-                'host': '127.0.0.1',
-                'port': '51087',
+                'host': '172.20.13.28',
+                //'host' : '127.0.0.1',
+                'port': '22',
                 'user': 'cmd',
                 'login': [
                     { prompt: 'password:', answer: 'cgadmin!\n' }
