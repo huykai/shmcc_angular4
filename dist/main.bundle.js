@@ -1782,7 +1782,8 @@ var TabPanelComponent = (function () {
         this.tabContentService = tabContentService;
         this.terminalCommandService = terminalCommandService;
         this.tasks = [];
-        this.socket_location = "http://127.0.0.1:3000/";
+        // socket_location = "http://127.0.0.1:3000/";
+        this.socket_location = location.origin;
     }
     TabPanelComponent.prototype.terminal = function (taskInfo) {
         var _this = this;
