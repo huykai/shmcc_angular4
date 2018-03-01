@@ -86,7 +86,7 @@ declare var window:any;
     }
     
     socket;
-    // socket_location = "http://127.0.0.1:3000/";
+    //socket_location = "http://127.0.0.1:3000/";
     socket_location = location.origin;
     terminal(taskInfo):any {
       console.log('taskInfo : ', taskInfo.host) ;
@@ -129,11 +129,7 @@ declare var window:any;
         });
         console.log('socket emit remote login');
         this.socket.emit('login', {
-          type: taskInfo['type'],
-          user: taskInfo['user'],
-          host: taskInfo['host'],
-          port: taskInfo['port'],
-          auth: taskInfo['auth']
+          name: taskInfo['name']
         });
         
       });
@@ -145,16 +141,16 @@ declare var window:any;
           return;
         }
         term.io.writeUTF16(data);
-        if (taskInfo['login'] && taskInfo['login'].length > 0) {
+        //if (taskInfo['login'] && taskInfo['login'].length > 0) {
           // console.log('login info: ', taskInfo['login']);
-          let loginparam = taskInfo['login'][0];
+        //  let loginparam = taskInfo['login'][0];
           // console.log('login param: ', loginparam);
-          if (data.indexOf(loginparam['prompt']) >= 0) {
-            console.log('login param: ', loginparam);
-            taskInfo['login'].splice(0,1);
-            term.command.socket.emit('input', loginparam['answer']);
-          }
-        }
+        //  if (data.indexOf(loginparam['prompt']) >= 0) {
+        //    console.log('login param: ', loginparam);
+        //    taskInfo['login'].splice(0,1);
+        //    term.command.socket.emit('input', loginparam['answer']);
+        //  }
+        //}
       });
       
       this.socket.on('disconnect', function() {

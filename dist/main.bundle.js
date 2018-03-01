@@ -1616,107 +1616,152 @@ var SideBarComponent = (function () {
         this.isCollapsed = false;
         this.mmes = [
             {
-                'type': 'telnet',
                 'name': 'SHMME03BNK',
-                'host': '172.20.13.28',
-                //'host' : '127.0.0.1',
-                //'port' : '51004',
-                'port': '23',
-                'login': [
-                    { prompt: 'USERNAME', answer: 'NOKIA1\r' },
-                    { prompt: 'PASSWORD', answer: 'NOKIA2016\r' }
-                ]
             },
             {
-                'type': 'telnet',
                 'name': 'SHMME04BNK',
-                //'address': '172.20.12.28',
-                'host': '127.0.0.1',
-                'port': '51007',
-                'login': [
-                    { prompt: 'USERNAME', answer: 'NOKIA1\r' },
-                    { prompt: 'PASSWORD', answer: 'NOKIA2016\r' }
-                ]
             },
             {
-                'type': 'ssh',
-                'name': 'CENTOS7',
-                'host': '10.20.0.231',
-                'port': '22',
-                'user': 'huykai',
-                'login': [
-                    { prompt: 'password:', answer: 'Huykai123\n' }
-                ]
+                'name': 'SHMME05BNK',
+            },
+            {
+                'name': 'SHMME06BNK',
+            },
+            {
+                'name': 'SHMME07BNK',
+            },
+            {
+                'name': 'SHMME08BNK',
+            },
+            {
+                'name': 'SHMME09BNK',
+            },
+            {
+                'name': 'SHMME10BNK',
             }
         ];
         this.saegws = [
             {
-                'type': 'ssh',
                 'name': 'SHSAEGW03BNK',
-                'host': '172.20.13.28',
-                //'host' : '127.0.0.1',
-                'port': '22',
-                'user': 'nokia1',
-                'login': [
-                    { prompt: 'password:', answer: 'qz76gprs\n' }
-                ]
             },
             {
-                'type': 'ssh',
                 'name': 'SHSAEGW04BNK',
-                //'address': '172.20.12.28',
-                'host': '127.0.0.1',
-                'port': '51016',
-                'user': 'nokia1',
-                'login': [
-                    { prompt: 'password:', answer: 'qz76gprs\n' }
-                ]
+            },
+            {
+                'name': 'SHSAEGW05BNK',
+            },
+            {
+                'name': 'SHSAEGW06BNK',
+            },
+            {
+                'name': 'SHSAEGW07BNK',
+            },
+            {
+                'name': 'SHSAEGW08BNK',
+            },
+            {
+                'name': 'SHSAEGW09BNK',
+            },
+            {
+                'name': 'SHSAEGW10BNK',
+            },
+            {
+                'name': 'SHSAEGW11BNK',
+            },
+            {
+                'name': 'SHSAEGW12BNK',
             }
         ];
         this.cgs = [
             {
-                'type': 'ssh',
+                'name': 'SHCG16BNK-1',
+            },
+            {
+                'name': 'SHCG16BNK-2',
+            },
+            {
                 'name': 'SHCG17BNK-1',
-                'host': '172.20.13.28',
-                //'host' : '127.0.0.1',
-                'port': '22',
-                'user': 'cmd',
-                'login': [
-                    { prompt: 'password:', answer: 'cgadmin!\n' }
-                ]
             },
             {
-                'type': 'ssh',
                 'name': 'SHCG17BNK-2',
-                //'address': '172.20.12.28',
-                'host': '127.0.0.1',
-                'port': '51088',
-                'user': 'cmd',
-                'login': [
-                    { prompt: 'password:', answer: 'cgadmin!\n' }
-                ]
             },
             {
-                'type': 'ssh',
                 'name': 'SHCG18BNK-1',
-                //'address': '172.20.13.28',
-                'host': '127.0.0.1',
-                'port': '51089',
-                'user': 'cmd',
-                'login': [
-                    { prompt: 'password:', answer: 'cgadmin!\n' }
-                ]
             },
             {
-                'type': 'ssh',
                 'name': 'SHCG18BNK-2',
-                //'address': '172.20.12.28',
-                'host': '127.0.0.1',
-                'port': '51092',
-                'user': 'cmd',
-                'login': [
-                    { prompt: 'password:', answer: 'cgadmin!\n' }
-                ]
+            },
+            {
+                'name': 'SHCG19BNK-1',
+            },
+            {
+                'name': 'SHCG19BNK-2',
+            },
+            {
+                'name': 'SHCG20BNK-1',
+            },
+            {
+                'name': 'SHCG20BNK-2',
+            },
+            {
+                'name': 'SHCG21BNK-1',
+            },
+            {
+                'name': 'SHCG21BNK-2',
+            },
+            {
+                'name': 'SHCG22BNK-1',
+            },
+            {
+                'name': 'SHCG22BNK-2',
+            },
+            {
+                'name': 'SHCG23BNK-1',
+            },
+            {
+                'name': 'SHCG23BNK-2',
+            },
+            {
+                'name': 'SHCG24BNK-1',
+            },
+            {
+                'name': 'SHCG24BNK-2',
+            },
+            {
+                'name': 'SHCG25BNK-1',
+            },
+            {
+                'name': 'SHCG25BNK-2',
+            },
+            {
+                'name': 'SHCG26BNK-1',
+            },
+            {
+                'name': 'SHCG26BNK-2',
+            },
+            {
+                'name': 'SHCG27BNK-1',
+            },
+            {
+                'name': 'SHCG27BNK-2',
+            },
+            {
+                'name': 'SHCG28BNK-1',
+            },
+            {
+                'name': 'SHCG28BNK-2',
+            },
+            {
+                'name': 'SHCG29BNK-1',
+            },
+            {
+                'name': 'SHCG29BNK-2',
+            },
+            {
+                'name': 'SHCG30BNK-1',
+            },
+            {
+                'name': 'SHCG30BNK-2',
             }
         ];
     }
@@ -1782,7 +1827,7 @@ var TabPanelComponent = (function () {
         this.tabContentService = tabContentService;
         this.terminalCommandService = terminalCommandService;
         this.tasks = [];
-        // socket_location = "http://127.0.0.1:3000/";
+        //socket_location = "http://127.0.0.1:3000/";
         this.socket_location = location.origin;
     }
     TabPanelComponent.prototype.terminal = function (taskInfo) {
@@ -1821,11 +1866,7 @@ var TabPanelComponent = (function () {
             });
             console.log('socket emit remote login');
             _this.socket.emit('login', {
-                type: taskInfo['type'],
-                user: taskInfo['user'],
-                host: taskInfo['host'],
-                port: taskInfo['port'],
-                auth: taskInfo['auth']
+                name: taskInfo['name']
             });
         });
         this.socket.on('output', function (data) {
@@ -1835,16 +1876,16 @@ var TabPanelComponent = (function () {
                 return;
             }
             term.io.writeUTF16(data);
-            if (taskInfo['login'] && taskInfo['login'].length > 0) {
-                // console.log('login info: ', taskInfo['login']);
-                var loginparam = taskInfo['login'][0];
-                // console.log('login param: ', loginparam);
-                if (data.indexOf(loginparam['prompt']) >= 0) {
-                    console.log('login param: ', loginparam);
-                    taskInfo['login'].splice(0, 1);
-                    term.command.socket.emit('input', loginparam['answer']);
-                }
-            }
+            //if (taskInfo['login'] && taskInfo['login'].length > 0) {
+            // console.log('login info: ', taskInfo['login']);
+            //  let loginparam = taskInfo['login'][0];
+            // console.log('login param: ', loginparam);
+            //  if (data.indexOf(loginparam['prompt']) >= 0) {
+            //    console.log('login param: ', loginparam);
+            //    taskInfo['login'].splice(0,1);
+            //    term.command.socket.emit('input', loginparam['answer']);
+            //  }
+            //}
         });
         this.socket.on('disconnect', function () {
             console.log("Socket.io connection closed");
