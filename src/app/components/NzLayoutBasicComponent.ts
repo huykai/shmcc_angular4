@@ -8,6 +8,7 @@ import {  AfterViewInit, ViewChild, Component, OnInit } from '@angular/core';
 import { SideBarComponent } from './SideBarComponent';
 import { ContentPanelComponent } from './ContentPanelComponent';
 import { FormPanelComponent } from './FormPanelComponent';
+import { InfoIframeComponent } from './InfoIframeComponent';
 
 import APP_CONFIG from '../app.config';
 import { Node, Link } from '../d3';
@@ -150,6 +151,7 @@ declare var window:any;
       </div>  
     </nz-layout>
     
+    
   </nz-layout>
 `,
 styles  : [
@@ -184,6 +186,9 @@ export class NzLayoutBasicComponent implements OnInit {
   
   nodes: Node[] = [];
   links: Link[] = [];
+
+  Ned:boolean = false;
+  Terminal:boolean = true;
   
   constructor() {
     

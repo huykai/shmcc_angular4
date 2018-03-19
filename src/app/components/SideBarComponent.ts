@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { TabContentService } from '../services/TabContentService';
+import { getService } from '../services/getService';
 
 @Component({
     selector: 'SideBarPanel',
@@ -10,44 +13,46 @@ import { TabContentService } from '../services/TabContentService';
       <li nz-submenu>
         <span title><i class="anticon anticon-user"></i><span class="nav-text">终端</span></span>
         <ul>
-            <li nz-submenu>
-              <span title><i class="anticon anticon-user"></i><span class="nav-text">MME</span></span>
-              <ul>
-                <li nz-menu-item *ngFor="let mme of mmes" (click)="onSelect(mme)">{{mme.name}}</li>
-              </ul>
-            </li>
-            <li nz-submenu>
-              <span title><i class="anticon anticon-user"></i><span class="nav-text">SAEGW</span></span>
-              <ul>
-                <li nz-menu-item *ngFor="let saegw of saegws" (click)="onSelect(saegw)">{{saegw.name}}</li>
-              </ul>
-            </li>
-            <li nz-submenu>
-            <span title><i class="anticon anticon-user"></i><span class="nav-text">CG</span></span>
-            <ul>
-              <li nz-menu-item *ngFor="let cg of cgs" (click)="onSelect(cg)">{{cg.name}}</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li nz-submenu>
-        <span title><i class="anticon anticon-team"></i><span class="nav-text">脚本执行</span></span>
-        <ul>
           <li nz-submenu>
             <span title><i class="anticon anticon-user"></i><span class="nav-text">MME</span></span>
             <ul>
-              <li nz-menu-item>用户状况</li>
+              <li nz-menu-item *ngFor="let mme of mmes" (click)="onSelect('terminal', mme)">{{mme.name}}</li>
             </ul>
           </li>
           <li nz-submenu>
             <span title><i class="anticon anticon-user"></i><span class="nav-text">SAEGW</span></span>
             <ul>
-              <li nz-menu-item>用户状况</li>
+              <li nz-menu-item *ngFor="let saegw of saegws" (click)="onSelect('terminal', saegw)">{{saegw.name}}</li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title><i class="anticon anticon-user"></i><span class="nav-text">CG</span></span>
+            <ul>
+              <li nz-menu-item *ngFor="let cg of cgs" (click)="onSelect('terminal', cg)">{{cg.name}}
+              </li>
             </ul>
           </li>
         </ul>
       </li>
-      <li nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">File</span></span></li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-team"></i><span class="nav-text">帮助信息查询</span></span>
+        <ul>
+          <li nz-menu-item (click)="onSelect('info', 'NED')">NED信息查询</li>
+          <li nz-submenu>
+            <span title><i class="anticon anticon-user"></i><span class="nav-text">网元信息查询</span></span>
+            <ul>
+              <li nz-menu-item *ngFor="let doc of docs" (click)="onSelect('info', doc)">{{doc}}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-team"></i><span class="nav-text">其他系统接口</span></span>
+        <ul>
+          <li nz-menu-item (click)="onSelect('info', 'FMA')">FMA系统</li>
+        </ul>
+      </li>
     </ul>
   `,
     styles: [],
@@ -208,19 +213,34 @@ import { TabContentService } from '../services/TabContentService';
       }
     ];
     
-    constructor(private tabContentService: TabContentService) {
+    docs: any;
+
+    docGetUrl = '../Documents/';
+    docGetUrlApi = 'http://127.0.0.1:3000/api/getDocumentList';
+    constructor(private tabContentService: TabContentService,
+                private getService: getService) {
     }
   
     ngOnInit() {
+      this.getService.getInfo(this.docGetUrlApi)
+      .subscribe(data => {
+        try {
+          // console.log(data)
+          this.docs = data
+          // console.log('Get Document docs: ', this.docs)
+        } catch (Error) {
+          console.log('Get Document with error. data: ', data.toString())
+        }
+        // console.log('this.docs: ', this.docs);
+      })
     }
 
-    onSelect(host) {
+    onSelect(type, info) {
       let taskInfo = {
-          title: host.name,
-          type: 'terminal',
-          info: host
+        title: type==='terminal'?info.name:info,
+        type: type,
+        info: info
       }
       this.tabContentService.announce(taskInfo);
-      console.log('onSelect tabContentService announce');
     }
   }

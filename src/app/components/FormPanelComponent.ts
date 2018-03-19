@@ -50,6 +50,17 @@ import { TerminalCommandService } from '../services/TerminalCommandService';
         </button>
       </div>
     </div>
+    <div nz-row>
+      <div nz-col [nzSpan]="1" [nzOffset]="1" >
+        <button nz-button [nzType]="'primary'" (click)="runCommand(job)" >
+          <span>Run</span>
+        </button>
+      </div>
+      <div nz-col [nzSpan]="18" [nzOffset]="1">
+        <button nz-button [nzType]="'primary'" (click)="runCommand(job)" >
+          <span>Run</span>
+        </button>
+      </div>
 
     <!--
     <div nz-form-item nz-row>

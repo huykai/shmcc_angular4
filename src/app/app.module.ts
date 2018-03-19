@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, FormGroup, FormArray, FormBuilder,
   Validators, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,8 +21,11 @@ import { FormPanelComponent } from './components/FormPanelComponent';
 import { TabPanelComponent } from './components/TabPanelComponent';
 import { SideBarComponent } from './components/SideBarComponent';
 import { ContentPanelComponent } from './components/ContentPanelComponent';
+import { InfoIframeComponent } from './components/InfoIframeComponent';
 import { TabContentService } from './services/TabContentService';
 import { TerminalCommandService } from './services/TerminalCommandService';
+import { SafePipe } from './pips/SafePipe';
+import { getService } from './services/getService';
 
 // Import for D3
 import { NzLayoutBasicComponent } from './components/NzLayoutBasicComponent';
@@ -134,7 +137,9 @@ const goldenLayoutConfig: GoldenLayoutConfiguration = {
     TabPanelComponent,
     FormPanelComponent,
     SideBarComponent,
-    ContentPanelComponent
+    ContentPanelComponent,
+    InfoIframeComponent,
+    SafePipe
     //ScreenComponent,
     //GlDirective
   ],
@@ -152,7 +157,7 @@ const goldenLayoutConfig: GoldenLayoutConfiguration = {
     BrowserModule,
     CommonModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     // Register the modules 
     BrowserAnimationsModule,
@@ -170,6 +175,7 @@ const goldenLayoutConfig: GoldenLayoutConfiguration = {
     SocketIOService,
     TabContentService,
     TerminalCommandService,
+    getService,
     //ScreenService,
     LayoutService,
     DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER

@@ -188,7 +188,7 @@ var CONFIG = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__progress_kendo_angular_layout__ = __webpack_require__("../../../../@progress/kendo-angular-layout/dist/es/main.js");
@@ -199,22 +199,25 @@ var CONFIG = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_TabPanelComponent__ = __webpack_require__("../../../../../src/app/components/TabPanelComponent.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_SideBarComponent__ = __webpack_require__("../../../../../src/app/components/SideBarComponent.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_ContentPanelComponent__ = __webpack_require__("../../../../../src/app/components/ContentPanelComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_TabContentService__ = __webpack_require__("../../../../../src/app/services/TabContentService.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_TerminalCommandService__ = __webpack_require__("../../../../../src/app/services/TerminalCommandService.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_NzLayoutBasicComponent__ = __webpack_require__("../../../../../src/app/components/NzLayoutBasicComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__d3__ = __webpack_require__("../../../../../src/app/d3/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__visuals_graph_graph_component__ = __webpack_require__("../../../../../src/app/visuals/graph/graph.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__visuals_shared__ = __webpack_require__("../../../../../src/app/visuals/shared/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_D3Components_BarChartD3Component__ = __webpack_require__("../../../../../src/app/components/D3Components/BarChartD3Component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_GoogleChartComponent__ = __webpack_require__("../../../../../src/app/components/GoogleChartComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_EvolutionComponent__ = __webpack_require__("../../../../../src/app/components/EvolutionComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_GoogleChartLineComponent__ = __webpack_require__("../../../../../src/app/components/GoogleChartLineComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_test_panel_component__ = __webpack_require__("../../../../../src/app/components/test-panel.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__goldsam_ng_golden_layout__ = __webpack_require__("../../../../@goldsam/ng-golden-layout/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_LeftsideComponent__ = __webpack_require__("../../../../../src/app/components/LeftsideComponent.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__goldenlayout_layoutservice__ = __webpack_require__("../../../../../src/app/goldenlayout/layoutservice.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__DynamicService_SocketIOService__ = __webpack_require__("../../../../../src/app/DynamicService/SocketIOService.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_GateOneComponents_GateOneTerminal__ = __webpack_require__("../../../../../src/app/components/GateOneComponents/GateOneTerminal.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_InfoIframeComponent__ = __webpack_require__("../../../../../src/app/components/InfoIframeComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_TabContentService__ = __webpack_require__("../../../../../src/app/services/TabContentService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_TerminalCommandService__ = __webpack_require__("../../../../../src/app/services/TerminalCommandService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pips_SafePipe__ = __webpack_require__("../../../../../src/app/pips/SafePipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_getService__ = __webpack_require__("../../../../../src/app/services/getService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_NzLayoutBasicComponent__ = __webpack_require__("../../../../../src/app/components/NzLayoutBasicComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__d3__ = __webpack_require__("../../../../../src/app/d3/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__visuals_graph_graph_component__ = __webpack_require__("../../../../../src/app/visuals/graph/graph.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__visuals_shared__ = __webpack_require__("../../../../../src/app/visuals/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_D3Components_BarChartD3Component__ = __webpack_require__("../../../../../src/app/components/D3Components/BarChartD3Component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_GoogleChartComponent__ = __webpack_require__("../../../../../src/app/components/GoogleChartComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_EvolutionComponent__ = __webpack_require__("../../../../../src/app/components/EvolutionComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_GoogleChartLineComponent__ = __webpack_require__("../../../../../src/app/components/GoogleChartLineComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_test_panel_component__ = __webpack_require__("../../../../../src/app/components/test-panel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__goldsam_ng_golden_layout__ = __webpack_require__("../../../../@goldsam/ng-golden-layout/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_LeftsideComponent__ = __webpack_require__("../../../../../src/app/components/LeftsideComponent.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__goldenlayout_layoutservice__ = __webpack_require__("../../../../../src/app/goldenlayout/layoutservice.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__DynamicService_SocketIOService__ = __webpack_require__("../../../../../src/app/DynamicService/SocketIOService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_GateOneComponents_GateOneTerminal__ = __webpack_require__("../../../../../src/app/components/GateOneComponents/GateOneTerminal.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -237,6 +240,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //Import the ButtonsModule
 
 //Import the ng-zorro-antd  --by alibaba
+
+
+
 
 
 
@@ -267,31 +273,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var goldenLayoutConfig = {
     components: [
         {
-            component: __WEBPACK_IMPORTED_MODULE_25__components_test_panel_component__["a" /* TestPanelComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_28__components_test_panel_component__["a" /* TestPanelComponent */],
             componentName: 'test-panel'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_23__components_EvolutionComponent__["a" /* EvolutionComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_26__components_EvolutionComponent__["a" /* EvolutionComponent */],
             componentName: 'EvolutionComponent'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_22__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_25__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
             componentName: 'GoogleChartComponent'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_24__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_27__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
             componentName: 'GoogleChartLineComponent'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_19__visuals_graph_graph_component__["a" /* GraphComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_22__visuals_graph_graph_component__["a" /* GraphComponent */],
             componentName: 'GraphComponent'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_21__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
+            component: __WEBPACK_IMPORTED_MODULE_24__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
             componentName: 'BarChartD3Component'
         },
         {
-            component: __WEBPACK_IMPORTED_MODULE_30__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */],
+            component: __WEBPACK_IMPORTED_MODULE_33__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */],
             componentName: 'GateOneTerminalComponent'
         }
     ],
@@ -333,58 +339,61 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_EvolutionComponent__["a" /* EvolutionComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_NzLayoutBasicComponent__["a" /* NzLayoutBasicComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__visuals_graph_graph_component__["a" /* GraphComponent */]
-        ].concat(__WEBPACK_IMPORTED_MODULE_20__visuals_shared__["a" /* SHARED_VISUALS */], __WEBPACK_IMPORTED_MODULE_18__d3__["a" /* D3_DIRECTIVES */], [
-            __WEBPACK_IMPORTED_MODULE_25__components_test_panel_component__["a" /* TestPanelComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__components_LeftsideComponent__["a" /* LeftsideComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
-            __WEBPACK_IMPORTED_MODULE_30__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__components_EvolutionComponent__["a" /* EvolutionComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__components_NzLayoutBasicComponent__["a" /* NzLayoutBasicComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__visuals_graph_graph_component__["a" /* GraphComponent */]
+        ].concat(__WEBPACK_IMPORTED_MODULE_23__visuals_shared__["a" /* SHARED_VISUALS */], __WEBPACK_IMPORTED_MODULE_21__d3__["a" /* D3_DIRECTIVES */], [
+            __WEBPACK_IMPORTED_MODULE_28__components_test_panel_component__["a" /* TestPanelComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__components_LeftsideComponent__["a" /* LeftsideComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
+            __WEBPACK_IMPORTED_MODULE_33__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */],
             __WEBPACK_IMPORTED_MODULE_12__components_TabPanelComponent__["a" /* TabPanelComponent */],
             __WEBPACK_IMPORTED_MODULE_11__components_FormPanelComponent__["a" /* FormPanelComponent */],
             __WEBPACK_IMPORTED_MODULE_13__components_SideBarComponent__["a" /* SideBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_ContentPanelComponent__["a" /* ContentPanelComponent */]
+            __WEBPACK_IMPORTED_MODULE_14__components_ContentPanelComponent__["a" /* ContentPanelComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_InfoIframeComponent__["a" /* InfoIframeComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__pips_SafePipe__["a" /* SafePipe */]
             //ScreenComponent,
             //GlDirective
         ]),
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_25__components_test_panel_component__["a" /* TestPanelComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_EvolutionComponent__["a" /* EvolutionComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__visuals_graph_graph_component__["a" /* GraphComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
-            __WEBPACK_IMPORTED_MODULE_30__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */]
+            __WEBPACK_IMPORTED_MODULE_28__components_test_panel_component__["a" /* TestPanelComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__components_GoogleChartComponent__["a" /* GoogleChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__components_EvolutionComponent__["a" /* EvolutionComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__components_GoogleChartLineComponent__["a" /* GoogleChartLineComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__visuals_graph_graph_component__["a" /* GraphComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__components_D3Components_BarChartD3Component__["a" /* BarChartD3Component */],
+            __WEBPACK_IMPORTED_MODULE_33__components_GateOneComponents_GateOneTerminal__["a" /* GateOneTerminalComponent */]
             //LeftsideComponent
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClientModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* ReactiveFormsModule */],
             // Register the modules 
             __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_9__progress_kendo_angular_buttons__["a" /* ButtonsModule */],
             // For ng-zorro-antd
             __WEBPACK_IMPORTED_MODULE_10_ng_zorro_antd__["a" /* NgZorroAntdModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_26__goldsam_ng_golden_layout__["a" /* GoldenLayoutModule */].forRoot(goldenLayoutConfig),
+            __WEBPACK_IMPORTED_MODULE_29__goldsam_ng_golden_layout__["a" /* GoldenLayoutModule */].forRoot(goldenLayoutConfig),
             __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
             // For Kendo
             __WEBPACK_IMPORTED_MODULE_7__progress_kendo_angular_layout__["a" /* LayoutModule */]
             //, PanelBarModule, SplitterModule, TabStripModule
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_18__d3__["b" /* D3Service */],
-            __WEBPACK_IMPORTED_MODULE_29__DynamicService_SocketIOService__["a" /* SocketIOService */],
-            __WEBPACK_IMPORTED_MODULE_15__services_TabContentService__["a" /* TabContentService */],
-            __WEBPACK_IMPORTED_MODULE_16__services_TerminalCommandService__["a" /* TerminalCommandService */],
+            __WEBPACK_IMPORTED_MODULE_21__d3__["b" /* D3Service */],
+            __WEBPACK_IMPORTED_MODULE_32__DynamicService_SocketIOService__["a" /* SocketIOService */],
+            __WEBPACK_IMPORTED_MODULE_16__services_TabContentService__["a" /* TabContentService */],
+            __WEBPACK_IMPORTED_MODULE_17__services_TerminalCommandService__["a" /* TerminalCommandService */],
+            __WEBPACK_IMPORTED_MODULE_19__services_getService__["a" /* getService */],
             //ScreenService,
-            __WEBPACK_IMPORTED_MODULE_28__goldenlayout_layoutservice__["a" /* LayoutService */],
-            __WEBPACK_IMPORTED_MODULE_26__goldsam_ng_golden_layout__["b" /* DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER */]
+            __WEBPACK_IMPORTED_MODULE_31__goldenlayout_layoutservice__["a" /* LayoutService */],
+            __WEBPACK_IMPORTED_MODULE_29__goldsam_ng_golden_layout__["b" /* DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
@@ -592,7 +601,7 @@ BarChartD3Component = __decorate([
         styles: [__webpack_require__("../../../../../src/app/components/D3Components/graph.component.css")]
     }),
     __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__goldsam_ng_golden_layout__["c" /* GoldenLayoutComponentState */])),
-    __metadata("design:paramtypes", [Object, typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* ChangeDetectorRef */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [Object, typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* ChangeDetectorRef */]) === "function" && _b || Object])
 ], BarChartD3Component);
 
 var _a, _b;
@@ -936,7 +945,7 @@ FormPanelComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'FormPanel',
         styles: [],
-        template: "\n<div style=\"margin-left:5px; width: 100%; overflow-y: auto;height:600px;\">\n  <!--<form nz-form [nzType]=\"'horizontal'\" [formGroup]=\"validateForm\"> -->\n  \n    <div nz-row>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <label>\u9009\u62E9\u811A\u672C\u6587\u4EF6\uFF1A</label>\n      </div>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <input type=\"file\" name=\"\" id=\"myFile\" value=\"\" multiple=\"false\" />\n      </div>\n    </div>\n    \n    <div nz-row>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <label>\u9009\u62E9\u7EC8\u7AEF\uFF1A</label>\n      </div>\n      <div nz-col [nzSpan]=\"14\" [nzOffset]=\"1\">\n        <nz-select style=\"margin: 0px,10px; width: 100%;\"\n          [nzMode]=\"'multiple'\"\n          [nzPlaceHolder]=\"'\u8BF7\u9009\u62E9\u7EC8\u7AEF'\"\n          [(ngModel)]=\"selectedTerminalMultipleOptions\"\n          [nzNotFoundContent]=\"'\u65E0\u6CD5\u627E\u5230'\">\n          <nz-option \n            *ngFor=\"let option of terminalOptions\"\n            [nzLabel]=\"option.label\"\n            [nzValue]=\"option.value\">\n          </nz-option>\n        </nz-select>\n      </div>\n    </div>\n\n    <div nz-row *ngFor=\"let job of jobs\">\n      <div nz-col [nzSpan]=\"1\" >\n        <label>{{job.index}}</label>\n      </div>\n      <div nz-col [nzSpan]=\"18\" >\n        <nz-input [(ngModel)]=\"job.command\" nzType=\"textarea\" nzAutosize nzPlaceHolder=\"Commands input and modify here...\"></nz-input>\n      </div>\n      <div nz-col [nzSpan]=\"5\" >\n        <button nz-button [nzType]=\"'primary'\" (click)=\"runCommand(job)\" >\n          <span>Run</span>\n        </button>\n      </div>\n    </div>\n\n    <!--\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Plain Text</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <span nz-form-text>China</span>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>Select</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-select formControlName=\"select\" [nzSize]=\"'large'\">\n          <nz-option [nzLabel]=\"'China'\" [nzValue]=\"'China'\"></nz-option>\n          <nz-option [nzLabel]=\"'U.S.A'\" [nzValue]=\"'U.S.A'\"></nz-option>\n        </nz-select>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>Select[multiple]</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-select formControlName=\"select_multiple\" [nzSize]=\"'large'\" [nzMode]=\"'multiple'\">\n          <nz-option [nzLabel]=\"'Red'\" [nzValue]=\"'Red'\"></nz-option>\n          <nz-option [nzLabel]=\"'Green'\" [nzValue]=\"'Green'\"></nz-option>\n          <nz-option [nzLabel]=\"'Blue'\" [nzValue]=\"'Blue'\"></nz-option>\n        </nz-select>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>DatePicker</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-datepicker formControlName=\"datepicker\" [nzSize]=\"'large'\">\n        </nz-datepicker>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>TimePicker</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-timepicker formControlName=\"timepicker\" [nzSize]=\"'large'\">\n        </nz-timepicker>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>InputNumber</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-input-number formControlName=\"input_number\" [nzSize]=\"'large'\" [nzStep]=\"1\" [nzMax]=\"4\" [nzMin]=\"1\"></nz-input-number>\n        <span nz-form-text> machines</span>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Switch</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-switch formControlName=\"switch\"></nz-switch>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Slider</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-slider formControlName=\"slider\" [nzMarks]=\"marks\"></nz-slider>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Radio.Group</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-radio-group formControlName=\"radio_group\">\n          <label nz-radio [nzValue]=\"1\">\n            <span>item 1</span>\n          </label>\n          <label nz-radio [nzValue]=\"2\">\n            <span>item 2</span>\n          </label>\n          <label nz-radio [nzValue]=\"3\">\n            <span>item 3</span>\n          </label>\n        </nz-radio-group>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Radio.Button</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-radio-group formControlName=\"radio_button\">\n          <label nz-radio-button [nzValue]=\"1\">\n            <span>item 1 4 4 4v4v4v4</span>\n          </label>\n          <label nz-radio-button [nzValue]=\"2\">\n            <span>item 2</span>\n          </label>\n          <label nz-radio-button [nzValue]=\"3\">\n            <span>item 3</span>\n          </label>\n        </nz-radio-group>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-control nz-col [nzSpan]=\"12\" [nzOffset]=\"6\">\n        <button nz-button [nzType]=\"'primary'\" [nzSize]=\"'large'\">Submit</button>\n      </div>\n    </div>\n    \n  </form>\n  -->\n</div>\n"
+        template: "\n<div style=\"margin-left:5px; width: 100%; overflow-y: auto;height:600px;\">\n  <!--<form nz-form [nzType]=\"'horizontal'\" [formGroup]=\"validateForm\"> -->\n  \n    <div nz-row>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <label>\u9009\u62E9\u811A\u672C\u6587\u4EF6\uFF1A</label>\n      </div>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <input type=\"file\" name=\"\" id=\"myFile\" value=\"\" multiple=\"false\" />\n      </div>\n    </div>\n    \n    <div nz-row>\n      <div nz-col [nzSpan]=\"6\" [nzOffset]=\"1\">\n        <label>\u9009\u62E9\u7EC8\u7AEF\uFF1A</label>\n      </div>\n      <div nz-col [nzSpan]=\"14\" [nzOffset]=\"1\">\n        <nz-select style=\"margin: 0px,10px; width: 100%;\"\n          [nzMode]=\"'multiple'\"\n          [nzPlaceHolder]=\"'\u8BF7\u9009\u62E9\u7EC8\u7AEF'\"\n          [(ngModel)]=\"selectedTerminalMultipleOptions\"\n          [nzNotFoundContent]=\"'\u65E0\u6CD5\u627E\u5230'\">\n          <nz-option \n            *ngFor=\"let option of terminalOptions\"\n            [nzLabel]=\"option.label\"\n            [nzValue]=\"option.value\">\n          </nz-option>\n        </nz-select>\n      </div>\n    </div>\n\n    <div nz-row *ngFor=\"let job of jobs\">\n      <div nz-col [nzSpan]=\"1\" >\n        <label>{{job.index}}</label>\n      </div>\n      <div nz-col [nzSpan]=\"18\" >\n        <nz-input [(ngModel)]=\"job.command\" nzType=\"textarea\" nzAutosize nzPlaceHolder=\"Commands input and modify here...\"></nz-input>\n      </div>\n      <div nz-col [nzSpan]=\"5\" >\n        <button nz-button [nzType]=\"'primary'\" (click)=\"runCommand(job)\" >\n          <span>Run</span>\n        </button>\n      </div>\n    </div>\n    <div nz-row>\n      <div nz-col [nzSpan]=\"1\" [nzOffset]=\"1\" >\n        <button nz-button [nzType]=\"'primary'\" (click)=\"runCommand(job)\" >\n          <span>Run</span>\n        </button>\n      </div>\n      <div nz-col [nzSpan]=\"18\" [nzOffset]=\"1\">\n        <button nz-button [nzType]=\"'primary'\" (click)=\"runCommand(job)\" >\n          <span>Run</span>\n        </button>\n      </div>\n\n    <!--\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Plain Text</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <span nz-form-text>China</span>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>Select</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-select formControlName=\"select\" [nzSize]=\"'large'\">\n          <nz-option [nzLabel]=\"'China'\" [nzValue]=\"'China'\"></nz-option>\n          <nz-option [nzLabel]=\"'U.S.A'\" [nzValue]=\"'U.S.A'\"></nz-option>\n        </nz-select>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>Select[multiple]</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-select formControlName=\"select_multiple\" [nzSize]=\"'large'\" [nzMode]=\"'multiple'\">\n          <nz-option [nzLabel]=\"'Red'\" [nzValue]=\"'Red'\"></nz-option>\n          <nz-option [nzLabel]=\"'Green'\" [nzValue]=\"'Green'\"></nz-option>\n          <nz-option [nzLabel]=\"'Blue'\" [nzValue]=\"'Blue'\"></nz-option>\n        </nz-select>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>DatePicker</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-datepicker formControlName=\"datepicker\" [nzSize]=\"'large'\">\n        </nz-datepicker>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label nz-form-item-required>TimePicker</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-timepicker formControlName=\"timepicker\" [nzSize]=\"'large'\">\n        </nz-timepicker>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>InputNumber</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-input-number formControlName=\"input_number\" [nzSize]=\"'large'\" [nzStep]=\"1\" [nzMax]=\"4\" [nzMin]=\"1\"></nz-input-number>\n        <span nz-form-text> machines</span>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Switch</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-switch formControlName=\"switch\"></nz-switch>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Slider</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-slider formControlName=\"slider\" [nzMarks]=\"marks\"></nz-slider>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Radio.Group</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-radio-group formControlName=\"radio_group\">\n          <label nz-radio [nzValue]=\"1\">\n            <span>item 1</span>\n          </label>\n          <label nz-radio [nzValue]=\"2\">\n            <span>item 2</span>\n          </label>\n          <label nz-radio [nzValue]=\"3\">\n            <span>item 3</span>\n          </label>\n        </nz-radio-group>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-label nz-col [nzSpan]=\"6\">\n        <label>Radio.Button</label>\n      </div>\n      <div nz-form-control nz-col [nzSpan]=\"14\">\n        <nz-radio-group formControlName=\"radio_button\">\n          <label nz-radio-button [nzValue]=\"1\">\n            <span>item 1 4 4 4v4v4v4</span>\n          </label>\n          <label nz-radio-button [nzValue]=\"2\">\n            <span>item 2</span>\n          </label>\n          <label nz-radio-button [nzValue]=\"3\">\n            <span>item 3</span>\n          </label>\n        </nz-radio-group>\n      </div>\n    </div>\n    <div nz-form-item nz-row>\n      <div nz-form-control nz-col [nzSpan]=\"12\" [nzOffset]=\"6\">\n        <button nz-button [nzType]=\"'primary'\" [nzSize]=\"'large'\">Submit</button>\n      </div>\n    </div>\n    \n  </form>\n  -->\n</div>\n"
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_TerminalCommandService__["a" /* TerminalCommandService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_TerminalCommandService__["a" /* TerminalCommandService */]) === "function" && _b || Object])
 ], FormPanelComponent);
@@ -1256,6 +1265,60 @@ var GoogleChartLineComponent_1, _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/InfoIframeComponent.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoIframeComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var InfoIframeComponent = (function () {
+    function InfoIframeComponent() {
+    }
+    InfoIframeComponent.prototype.ngOnInit = function () {
+        if (this.urlsrc === 'NED') {
+            // this.url = "http://localhost:9090/informationbrowser/index.jsp";
+            this.url = "http://172.20.24.252:9090/informationbrowser/index.jsp";
+        }
+        else if (this.urlsrc.split('.')[1] === 'pdf') {
+            console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
+            // this.url = "http://localhost:3000/documents/" + this.urlsrc;
+            this.url = "http://localhost:3000/documents/" + this.urlsrc;
+        }
+        else if (this.urlsrc === 'FMA') {
+            console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
+            // this.url = "http://localhost:51018/FMANS17/login.xhtml";
+            this.url = "http://10.10.31.19:8080/FMANS17/login.xhtml";
+        }
+    };
+    return InfoIframeComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('urlsrc'),
+    __metadata("design:type", String)
+], InfoIframeComponent.prototype, "urlsrc", void 0);
+InfoIframeComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
+        selector: 'InfoIframe',
+        template: "\n        <iframe width=\"100%\" height=\"800\" [src]=\"url | safe\">\n            <p>Your browser does not support iframes.</p>\n        </iframe>\n    ",
+        styles: []
+    }),
+    __metadata("design:paramtypes", [])
+], InfoIframeComponent);
+
+//# sourceMappingURL=InfoIframeComponent.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/LeftsideComponent.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1416,6 +1479,8 @@ var NzLayoutBasicComponent = (function () {
         //@ViewChild()
         this.nodes = [];
         this.links = [];
+        this.Ned = false;
+        this.Terminal = true;
         var N = __WEBPACK_IMPORTED_MODULE_1__app_config__["a" /* default */].N, getIndex = function (number) { return number - 1; };
         /** constructing the nodes array */
         for (var i = 1; i <= N; i++) {
@@ -1580,7 +1645,7 @@ NzLayoutBasicComponent = __decorate([
             }
           ` ]
           */
-        template: "\n  <nz-layout>\n    <nz-sider nzCollapsible [(nzCollapsed)]=\"isCollapsed\">\n      <SideBarPanel></SideBarPanel>\n    </nz-sider>\n    <nz-layout>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"24\">\n          <nz-content style=\"margin:0 16px;\">\n            <nz-breadcrumb style=\"margin:12px 0;\">\n              <nz-breadcrumb-item>\n                <button nz-button [nzType]=\"'primary'\" (click)=\"setManualCommand()\">\n                  <span>Manual Command</span>\n                </button>\n              </nz-breadcrumb-item>\n              <nz-breadcrumb-item>\n                <button nz-button [nzType]=\"'primary'\" (click)=\"setBatchCommand()\">\n                <span>Batch Command</span>\n                </button>\n              </nz-breadcrumb-item>\n            </nz-breadcrumb>\n          </nz-content>\n        </div>\n      </div>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"terminal_span\">\n          <nz-content style=\"margin:0 2px;\">\n            <div>\n              <ContentPanel></ContentPanel>\n            </div>\n          </nz-content>\n        </div>\n        \n        <div nz-col [nzSpan]=\"batchform_span\" [hidden]=\"batchform_hidden\">\n          <nz-content style=\"margin:0 2px;\">\n            <div>\n              <FormPanel></FormPanel>\n            </div>\n          </nz-content>\n        </div>\n        \n      </div>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"24\">\n          <nz-footer style=\"text-align: center;\">Ant Design \u00A92017 Implement By Angular</nz-footer>    \n        </div>\n      </div>  \n    </nz-layout>\n    \n  </nz-layout>\n",
+        template: "\n  <nz-layout>\n    <nz-sider nzCollapsible [(nzCollapsed)]=\"isCollapsed\">\n      <SideBarPanel></SideBarPanel>\n    </nz-sider>\n    <nz-layout>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"24\">\n          <nz-content style=\"margin:0 16px;\">\n            <nz-breadcrumb style=\"margin:12px 0;\">\n              <nz-breadcrumb-item>\n                <button nz-button [nzType]=\"'primary'\" (click)=\"setManualCommand()\">\n                  <span>Manual Command</span>\n                </button>\n              </nz-breadcrumb-item>\n              <nz-breadcrumb-item>\n                <button nz-button [nzType]=\"'primary'\" (click)=\"setBatchCommand()\">\n                <span>Batch Command</span>\n                </button>\n              </nz-breadcrumb-item>\n            </nz-breadcrumb>\n          </nz-content>\n        </div>\n      </div>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"terminal_span\">\n          <nz-content style=\"margin:0 2px;\">\n            <div>\n              <ContentPanel></ContentPanel>\n            </div>\n          </nz-content>\n        </div>\n        \n        <div nz-col [nzSpan]=\"batchform_span\" [hidden]=\"batchform_hidden\">\n          <nz-content style=\"margin:0 2px;\">\n            <div>\n              <FormPanel></FormPanel>\n            </div>\n          </nz-content>\n        </div>\n        \n      </div>\n      <div nz-row>\n        <div nz-col [nzSpan]=\"24\">\n          <nz-footer style=\"text-align: center;\">Ant Design \u00A92017 Implement By Angular</nz-footer>    \n        </div>\n      </div>  \n    </nz-layout>\n    \n    \n  </nz-layout>\n",
         styles: [
             ":host ::ng-deep .logo {\n    height: 32px;\n    background: #333;\n    border-radius: 6px;\n    margin: 16px;\n  }\n\n  :host ::ng-deep .ant-layout-sider-collapsed .nav-text {\n    display: none;\n  }\n\n  :host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {\n    display: none;\n  }\n\n  :host ::ng-deep .ant-layout-sider-collapsed .anticon {\n    font-size: 16px;\n    margin-left: 8px;\n  }\n  "
         ]
@@ -1598,6 +1663,7 @@ NzLayoutBasicComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_TabContentService__ = __webpack_require__("../../../../../src/app/services/TabContentService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_getService__ = __webpack_require__("../../../../../src/app/services/getService.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SideBarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1610,9 +1676,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var SideBarComponent = (function () {
-    function SideBarComponent(tabContentService) {
+    function SideBarComponent(tabContentService, getService) {
         this.tabContentService = tabContentService;
+        this.getService = getService;
         this.isCollapsed = false;
         this.mmes = [
             {
@@ -1764,31 +1832,45 @@ var SideBarComponent = (function () {
                 'name': 'SHCG30BNK-2',
             }
         ];
+        this.docGetUrl = '../Documents/';
+        this.docGetUrlApi = 'http://127.0.0.1:3000/api/getDocumentList';
     }
     SideBarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.getService.getInfo(this.docGetUrlApi)
+            .subscribe(function (data) {
+            try {
+                // console.log(data)
+                _this.docs = data;
+                // console.log('Get Document docs: ', this.docs)
+            }
+            catch (Error) {
+                console.log('Get Document with error. data: ', data.toString());
+            }
+            // console.log('this.docs: ', this.docs);
+        });
     };
-    SideBarComponent.prototype.onSelect = function (host) {
+    SideBarComponent.prototype.onSelect = function (type, info) {
         var taskInfo = {
-            title: host.name,
-            type: 'terminal',
-            info: host
+            title: type === 'terminal' ? info.name : info,
+            type: type,
+            info: info
         };
         this.tabContentService.announce(taskInfo);
-        console.log('onSelect tabContentService announce');
     };
     return SideBarComponent;
 }());
 SideBarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'SideBarPanel',
-        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n            <li nz-submenu>\n              <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n              <ul>\n                <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect(mme)\">{{mme.name}}</li>\n              </ul>\n            </li>\n            <li nz-submenu>\n              <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n              <ul>\n                <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect(saegw)\">{{saegw.name}}</li>\n              </ul>\n            </li>\n            <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect(cg)\">{{cg.name}}</li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u811A\u672C\u6267\u884C</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item>\u7528\u6237\u72B6\u51B5</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item>\u7528\u6237\u72B6\u51B5</li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-menu-item><span><i class=\"anticon anticon-file\"></i><span class=\"nav-text\">File</span></span></li>\n    </ul>\n  ",
+        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect('terminal', mme)\">{{mme.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect('terminal', saegw)\">{{saegw.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect('terminal', cg)\">{{cg.name}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5E2E\u52A9\u4FE1\u606F\u67E5\u8BE2</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED')\">NED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7F51\u5143\u4FE1\u606F\u67E5\u8BE2</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let doc of docs\" (click)=\"onSelect('info', doc)\">{{doc}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5176\u4ED6\u7CFB\u7EDF\u63A5\u53E3</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA')\">FMA\u7CFB\u7EDF</li>\n        </ul>\n      </li>\n    </ul>\n  ",
         styles: [],
         providers: []
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_TabContentService__["a" /* TabContentService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_TabContentService__["a" /* TabContentService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_TabContentService__["a" /* TabContentService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_TabContentService__["a" /* TabContentService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_getService__["a" /* getService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_getService__["a" /* getService */]) === "function" && _b || Object])
 ], SideBarComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=SideBarComponent.js.map
 
 /***/ }),
@@ -1827,9 +1909,9 @@ var TabPanelComponent = (function () {
         this.tabContentService = tabContentService;
         this.terminalCommandService = terminalCommandService;
         this.tasks = [];
-        //socket_location = "http://127.0.0.1:3000/";
-        this.socket_location = location.origin;
+        this.socket_location = "http://127.0.0.1:3000/";
     }
+    // socket_location = location.origin;
     TabPanelComponent.prototype.terminal = function (taskInfo) {
         var _this = this;
         console.log('taskInfo : ', taskInfo.host);
@@ -1897,13 +1979,13 @@ var TabPanelComponent = (function () {
         });
         this.tabSubscription = this.tabContentService.Announced$.subscribe(function (taskInfo) {
             console.log('TabPanelComponent announce received ', taskInfo);
-            if (taskInfo['type'] == 'terminal') {
+            if (taskInfo['type'] === 'info') {
                 var taskId = taskInfo['title'] + Date.now();
-                taskInfo['info']['taskId'] = taskId;
                 var newtask = {
+                    type: 'info',
                     title: taskInfo['title'],
                     taskId: taskId,
-                    content: "\n              terminal on " + taskInfo['title'] + "\n              ",
+                    content: "\n              Info about " + taskInfo['title'] + "\n              ",
                     selected: true
                 };
                 for (var _i = 0, _a = _this.tasks; _i < _a.length; _i++) {
@@ -1911,12 +1993,28 @@ var TabPanelComponent = (function () {
                     task['selected'] = false;
                 }
                 _this.tasks.push(newtask);
+            }
+            else if (taskInfo['type'] === 'terminal') {
+                var taskId = taskInfo['title'] + Date.now();
+                taskInfo['info']['taskId'] = taskId;
+                var newtask = {
+                    type: 'terminal',
+                    title: taskInfo['title'],
+                    taskId: taskId,
+                    content: "\n              terminal on " + taskInfo['title'] + "\n              ",
+                    selected: true
+                };
+                for (var _b = 0, _c = _this.tasks; _b < _c.length; _b++) {
+                    var task = _c[_b];
+                    task['selected'] = false;
+                }
+                _this.tasks.push(newtask);
                 var taskInfoDetail = JSON.parse(JSON.stringify(taskInfo['info']));
                 _this.terminal(taskInfoDetail);
                 console.log('taskInfoDetail: ', taskInfoDetail, ' newtask: ', newtask, ' tasks: ', _this.tasks);
                 var taskParams = [];
-                for (var _b = 0, _c = _this.tasks; _b < _c.length; _b++) {
-                    var task = _c[_b];
+                for (var _d = 0, _e = _this.tasks; _d < _e.length; _d++) {
+                    var task = _e[_d];
                     var tasksinfo = {
                         'label': task['title'],
                         'value': task['taskId']
@@ -1945,7 +2043,7 @@ var TabPanelComponent = (function () {
 TabPanelComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'tabs-card',
-        template: "\n    <!--\n    <nz-content height=\"240\" style=\"margin:0 16px; padding:24px; background: #fff\">\n      <FormPanel> </FormPanel>\n    </nz-content>\n    -->\n    <!--\n    <kendo-tabstrip>\n      <kendo-tabstrip-tab *ngFor=\"let task of tasks\" [title]=\"task.title\" [selected]=\"task.selected\">\n        <ng-template kendoTabContent>\n          <p>\n            {{task.content}}\n          </p>\n          <div id='terminal_{{task.title}}' class='terminal'> </div>\n        </ng-template>\n      </kendo-tabstrip-tab>\n    </kendo-tabstrip>\n    -->\n    <nz-tabset [nzType]=\"'card'\" [nzSelectedIndex]=\"tasks.length\">\n      <nz-tab *ngFor=\"let task of tasks\" >\n        <ng-template #nzTabHeading>\n          {{task.title}}\n          <i class=\"anticon anticon-cross\" (click)=\"closeTab(task)\"></i>\n        </ng-template>\n        <span>{{task.content}}</span>\n        <div id='terminal_parent'>\n          <div id='terminal_{{task.taskId}}' class='terminal'> </div>\n        </div>\n      </nz-tab>\n    </nz-tabset>\n    <!--\n      <nz-tabset [nzTabPosition]=\"'top'\" [nzType]=\"'card'\">\n        <nz-tab *ngFor=\"let tab of tabs\">\n          <ng-template #nzTabHeading>\n            Tab {{tab.index}}\n          </ng-template>\n          <span>Content of Tab Pane {{tab.index}}</span>\n        </nz-tab>\n      </nz-tabset>\n    -->\n      ",
+        template: "\n    <!--\n    <nz-content height=\"240\" style=\"margin:0 16px; padding:24px; background: #fff\">\n      <FormPanel> </FormPanel>\n    </nz-content>\n    -->\n    <!--\n    <kendo-tabstrip>\n      <kendo-tabstrip-tab *ngFor=\"let task of tasks\" [title]=\"task.title\" [selected]=\"task.selected\">\n        <ng-template kendoTabContent>\n          <p>\n            {{task.content}}\n          </p>\n          <div id='terminal_{{task.title}}' class='terminal'> </div>\n        </ng-template>\n      </kendo-tabstrip-tab>\n    </kendo-tabstrip>\n    -->\n    <nz-tabset [nzType]=\"'card'\" [nzSelectedIndex]=\"tasks.length\">\n      <nz-tab *ngFor=\"let task of tasks\" >\n        <ng-template #nzTabHeading>\n          {{task.title}}\n          <i class=\"anticon anticon-cross\" (click)=\"closeTab(task)\"></i>\n        </ng-template>\n        <span>{{task.content}}</span>\n        <div id='terminal_parent' *ngIf=\"task.type === 'terminal'\">\n          <div id='terminal_{{task.taskId}}' class='terminal'> </div>\n        </div>\n        <div id='info_parent' *ngIf=\"task.type === 'info'\">\n          <div id='info_{{task.taskId}}' class='info'> \n            <InfoIframe [urlsrc]=\"task.title\"></InfoIframe>\n          </div>\n        </div>\n      </nz-tab>\n    </nz-tabset>\n      ",
         styles: ["\n    #terminal_parent {\n      display: block;\n      position: relative;\n      overflow-x:auto;\n      white-space:nowrap;\n      width: 100%;\n      height: 630px;\n    }\n    .terminal {\n      display: block;\n      position: relative;\n      width: 800px;\n      height: 600px;\n      padding: 0px, 0px, 10px, 2px;\n    }\n    "],
         providers: []
     }),
@@ -2153,18 +2251,18 @@ var DraggableDirective = (function () {
     return DraggableDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])('draggableNode'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('draggableNode'),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1____["c" /* Node */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["c" /* Node */]) === "function" && _a || Object)
 ], DraggableDirective.prototype, "node", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])('draggableInGraph'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('draggableInGraph'),
     __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1____["d" /* ForceDirectedGraph */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["d" /* ForceDirectedGraph */]) === "function" && _b || Object)
 ], DraggableDirective.prototype, "graph", void 0);
 DraggableDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Directive */])({
         selector: '[draggableNode]'
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */]) === "function" && _d || Object])
 ], DraggableDirective);
 
 var _a, _b, _c, _d;
@@ -2222,14 +2320,14 @@ var ZoomableDirective = (function () {
     return ZoomableDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])('zoomableOf'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('zoomableOf'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */]) === "function" && _a || Object)
 ], ZoomableDirective.prototype, "containerElement", void 0);
 ZoomableDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Directive */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Directive */])({
         selector: '[zoomableOf]'
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1____["b" /* D3Service */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* ElementRef */]) === "function" && _c || Object])
 ], ZoomableDirective);
 
 var _a, _b, _c;
@@ -2275,7 +2373,7 @@ var FORCES = {
 };
 var ForceDirectedGraph = (function () {
     function ForceDirectedGraph(nodes, links, options) {
-        this.ticker = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]();
+        this.ticker = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* EventEmitter */]();
         this.nodes = [];
         this.links = [];
         this.nodes = nodes;
@@ -18576,6 +18674,43 @@ module.exports = { hyktty }
 
 /***/ }),
 
+/***/ "../../../../../src/app/pips/SafePipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafePipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SafePipe = (function () {
+    function SafePipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    SafePipe.prototype.transform = function (url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    };
+    return SafePipe;
+}());
+SafePipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* Pipe */])({ name: 'safe' }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["e" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["e" /* DomSanitizer */]) === "function" && _a || Object])
+], SafePipe);
+
+var _a;
+//# sourceMappingURL=SafePipe.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/TabContentService.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18683,6 +18818,44 @@ TerminalCommandService = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/getService.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var getService = (function () {
+    function getService(http) {
+        this.http = http;
+        this.configUrl = '';
+    }
+    getService.prototype.getInfo = function (Url) {
+        return this.http.get(Url);
+    };
+    return getService;
+}());
+getService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+], getService);
+
+var _a;
+//# sourceMappingURL=getService.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/visuals/graph/graph.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18781,7 +18954,7 @@ GraphComponent = __decorate([
         template: "\n    <svg #svg [attr.width]=\"_options.width\" [attr.height]=\"_options.height\">\n      <g [zoomableOf]=\"svg\">\n        <g [linkVisual]=\"link\" *ngFor=\"let link of links\"></g>\n        <g [nodeVisual]=\"node\" *ngFor=\"let node of nodes\"\n            [draggableNode]=\"node\" [draggableInGraph]=\"graph\"></g>\n      </g>\n    </svg>\n  ",
         styles: [__webpack_require__("../../../../../src/app/visuals/graph/graph.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* ChangeDetectorRef */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["b" /* D3Service */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* ChangeDetectorRef */]) === "function" && _b || Object])
 ], GraphComponent);
 
 var _a, _b;
@@ -18852,7 +19025,7 @@ var LinkVisualComponent = (function () {
     return LinkVisualComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])('linkVisual'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('linkVisual'),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["e" /* Link */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["e" /* Link */]) === "function" && _a || Object)
 ], LinkVisualComponent.prototype, "link", void 0);
 LinkVisualComponent = __decorate([
@@ -18910,7 +19083,7 @@ var NodeVisualComponent = (function () {
     return NodeVisualComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])('nodeVisual'),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('nodeVisual'),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__d3__["c" /* Node */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__d3__["c" /* Node */]) === "function" && _a || Object)
 ], NodeVisualComponent.prototype, "node", void 0);
 NodeVisualComponent = __decorate([

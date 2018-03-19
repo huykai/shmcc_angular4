@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TabContentService } from '../services/TabContentService';
 import { TerminalCommandService } from '../services/TerminalCommandService';
 import { Subscription }   from 'rxjs/Subscription';
+import { InfoIframeComponent } from './InfoIframeComponent';
+
 
 import { lib, hterm } from '../hyktty/hterm_all.js';
 import { hyktty } from '../hyktty/hyktty.js';
@@ -38,21 +40,16 @@ declare var window:any;
           <i class="anticon anticon-cross" (click)="closeTab(task)"></i>
         </ng-template>
         <span>{{task.content}}</span>
-        <div id='terminal_parent'>
+        <div id='terminal_parent' *ngIf="task.type === 'terminal'">
           <div id='terminal_{{task.taskId}}' class='terminal'> </div>
+        </div>
+        <div id='info_parent' *ngIf="task.type === 'info'">
+          <div id='info_{{task.taskId}}' class='info'> 
+            <InfoIframe [urlsrc]="task.title"></InfoIframe>
+          </div>
         </div>
       </nz-tab>
     </nz-tabset>
-    <!--
-      <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'">
-        <nz-tab *ngFor="let tab of tabs">
-          <ng-template #nzTabHeading>
-            Tab {{tab.index}}
-          </ng-template>
-          <span>Content of Tab Pane {{tab.index}}</span>
-        </nz-tab>
-      </nz-tabset>
-    -->
       `,
     styles: [`
     #terminal_parent {
@@ -86,8 +83,8 @@ declare var window:any;
     }
     
     socket;
-    //socket_location = "http://127.0.0.1:3000/";
-    socket_location = location.origin;
+    socket_location = "http://127.0.0.1:3000/";
+    // socket_location = location.origin;
     terminal(taskInfo):any {
       console.log('taskInfo : ', taskInfo.host) ;
       var term;
@@ -169,10 +166,27 @@ declare var window:any;
         taskInfo => {
           console.log('TabPanelComponent announce received ', taskInfo);
           
-          if (taskInfo['type'] == 'terminal') {
+          if (taskInfo['type'] === 'info') {
+            let taskId = taskInfo['title'] + Date.now();
+            let newtask = {
+              type: 'info',
+              title: taskInfo['title'],
+              taskId: taskId,
+              content: `
+              Info about ${taskInfo['title']}
+              `,
+              selected: true
+            }
+            for (let task of this.tasks){
+              task['selected'] = false;
+            }
+            this.tasks.push(newtask);
+          }
+          else if(taskInfo['type'] === 'terminal') {
             let taskId = taskInfo['title'] + Date.now();
             taskInfo['info']['taskId'] = taskId;
             let newtask = {
+              type: 'terminal',
               title: taskInfo['title'],
               taskId: taskId,
               content: `
