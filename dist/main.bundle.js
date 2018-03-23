@@ -1289,18 +1289,18 @@ var InfoIframeComponent = (function () {
             // this.url = "http://localhost:9090/informationbrowser/index.jsp";
             // this.url = "http://172.20.24.252:9090/informationbrowser/index.jsp";
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
-            this.url = "http://localhost:3000/webs/ned/index.jsp";
+            this.url = "webs/ned/index.jsp";
         }
         else if (this.urlsrc.split('.')[1] === 'pdf') {
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
             // this.url = "http://localhost:3000/documents/" + this.urlsrc;
-            this.url = "http://localhost:3000/documents/" + this.urlsrc;
+            this.url = "/documents/" + this.urlsrc;
         }
         else if (this.urlsrc === 'FMA') {
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
             // this.url = "http://localhost:51018/FMANS17/login.xhtml";
             // this.url = "http://10.10.31.19:8080/FMANS17/login.xhtml";
-            this.url = "http://localhost:3000/webs/fma/login.xhtml";
+            this.url = "/webs/fma/login.xhtml";
         }
     };
     return InfoIframeComponent;
