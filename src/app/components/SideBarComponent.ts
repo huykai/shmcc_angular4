@@ -216,7 +216,7 @@ import { getService } from '../services/getService';
     docs: any;
 
     docGetUrl = '../Documents/';
-    docGetUrlApi = 'http://127.0.0.1:3000/api/getDocumentList';
+    docGetUrlApi = '/api/getDocumentList';
     constructor(private tabContentService: TabContentService,
                 private getService: getService) {
     }
