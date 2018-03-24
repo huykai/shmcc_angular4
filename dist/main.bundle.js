@@ -1289,7 +1289,12 @@ var InfoIframeComponent = (function () {
             // this.url = "http://localhost:9090/informationbrowser/index.jsp";
             // this.url = "http://172.20.24.252:9090/informationbrowser/index.jsp";
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
-            this.url = "/webs/ned/index.jsp";
+            if (this.urltype === "local") {
+                this.url = "http://localhost:9090/informationbrowser/index.jsp";
+            }
+            else {
+                this.url = "/webs/ned/index.jsp";
+            }
         }
         else if (this.urlsrc.split('.')[1] === 'pdf') {
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
@@ -1300,7 +1305,12 @@ var InfoIframeComponent = (function () {
             console.log('InfoIframeComponent urlsrc: ', this.urlsrc);
             // this.url = "http://localhost:51018/FMANS17/login.xhtml";
             // this.url = "http://10.10.31.19:8080/FMANS17/login.xhtml";
-            this.url = "/webs/fma/login.xhtml";
+            if (this.urltype === "local") {
+                this.url = "http://localhost:51018/FMANS17/login.xhtml";
+            }
+            else {
+                this.url = "/webs/fma/login.xhtml";
+            }
         }
     };
     return InfoIframeComponent;
@@ -1309,6 +1319,10 @@ __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('urlsrc'),
     __metadata("design:type", String)
 ], InfoIframeComponent.prototype, "urlsrc", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('urltype'),
+    __metadata("design:type", String)
+], InfoIframeComponent.prototype, "urltype", void 0);
 InfoIframeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'InfoIframe',
@@ -1853,11 +1867,11 @@ var SideBarComponent = (function () {
             // console.log('this.docs: ', this.docs);
         });
     };
-    SideBarComponent.prototype.onSelect = function (type, info) {
+    SideBarComponent.prototype.onSelect = function (type, info, option) {
         var taskInfo = {
             title: type === 'terminal' ? info.name : info,
             type: type,
-            info: info
+            info: option
         };
         this.tabContentService.announce(taskInfo);
     };
@@ -1866,7 +1880,7 @@ var SideBarComponent = (function () {
 SideBarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'SideBarPanel',
-        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect('terminal', mme)\">{{mme.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect('terminal', saegw)\">{{saegw.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect('terminal', cg)\">{{cg.name}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5E2E\u52A9\u4FE1\u606F\u67E5\u8BE2</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED')\">NED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7F51\u5143\u4FE1\u606F\u67E5\u8BE2</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let doc of docs\" (click)=\"onSelect('info', doc)\">{{doc}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5176\u4ED6\u7CFB\u7EDF\u63A5\u53E3</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA')\">FMA\u7CFB\u7EDF</li>\n        </ul>\n      </li>\n    </ul>\n  ",
+        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect('terminal', mme)\">{{mme.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect('terminal', saegw)\">{{saegw.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect('terminal', cg)\">{{cg.name}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5E2E\u52A9\u4FE1\u606F\u67E5\u8BE2</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED_local')\">\u672C\u5730NED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED_remote')\">\u8FDC\u7A0BNED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7F51\u5143\u4FE1\u606F\u67E5\u8BE2</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let doc of docs\" (click)=\"onSelect('info', doc)\">{{doc}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5176\u4ED6\u7CFB\u7EDF\u63A5\u53E3</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'local')\">\u672C\u5730FMA\u7CFB\u7EDF</li>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'remote')\">\u8FDC\u7A0BFMA\u7CFB\u7EDF</li>\n        </ul>\n      </li>\n    </ul>\n  ",
         styles: [],
         providers: []
     }),
@@ -1988,7 +2002,8 @@ var TabPanelComponent = (function () {
                     type: 'info',
                     title: taskInfo['title'],
                     taskId: taskId,
-                    content: "\n              Info about " + taskInfo['title'] + "\n              ",
+                    info: taskInfo['info'],
+                    content: "\n              Info about " + taskInfo['title'] + " " + taskInfo['info'] + " \n              ",
                     selected: true
                 };
                 for (var _i = 0, _a = _this.tasks; _i < _a.length; _i++) {
@@ -2004,7 +2019,8 @@ var TabPanelComponent = (function () {
                     type: 'terminal',
                     title: taskInfo['title'],
                     taskId: taskId,
-                    content: "\n              terminal on " + taskInfo['title'] + "\n              ",
+                    info: '',
+                    content: "\n              terminal on " + taskInfo['title'] + " \n              ",
                     selected: true
                 };
                 for (var _b = 0, _c = _this.tasks; _b < _c.length; _b++) {
@@ -2046,7 +2062,7 @@ var TabPanelComponent = (function () {
 TabPanelComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'tabs-card',
-        template: "\n    <!--\n    <nz-content height=\"240\" style=\"margin:0 16px; padding:24px; background: #fff\">\n      <FormPanel> </FormPanel>\n    </nz-content>\n    -->\n    <!--\n    <kendo-tabstrip>\n      <kendo-tabstrip-tab *ngFor=\"let task of tasks\" [title]=\"task.title\" [selected]=\"task.selected\">\n        <ng-template kendoTabContent>\n          <p>\n            {{task.content}}\n          </p>\n          <div id='terminal_{{task.title}}' class='terminal'> </div>\n        </ng-template>\n      </kendo-tabstrip-tab>\n    </kendo-tabstrip>\n    -->\n    <nz-tabset [nzType]=\"'card'\" [nzSelectedIndex]=\"tasks.length\">\n      <nz-tab *ngFor=\"let task of tasks\" >\n        <ng-template #nzTabHeading>\n          {{task.title}}\n          <i class=\"anticon anticon-cross\" (click)=\"closeTab(task)\"></i>\n        </ng-template>\n        <span>{{task.content}}</span>\n        <div id='terminal_parent' *ngIf=\"task.type === 'terminal'\">\n          <div id='terminal_{{task.taskId}}' class='terminal'> </div>\n        </div>\n        <div id='info_parent' *ngIf=\"task.type === 'info'\">\n          <div id='info_{{task.taskId}}' class='info'> \n            <InfoIframe [urlsrc]=\"task.title\"></InfoIframe>\n          </div>\n        </div>\n      </nz-tab>\n    </nz-tabset>\n      ",
+        template: "\n    <!--\n    <nz-content height=\"240\" style=\"margin:0 16px; padding:24px; background: #fff\">\n      <FormPanel> </FormPanel>\n    </nz-content>\n    -->\n    <!--\n    <kendo-tabstrip>\n      <kendo-tabstrip-tab *ngFor=\"let task of tasks\" [title]=\"task.title\" [selected]=\"task.selected\">\n        <ng-template kendoTabContent>\n          <p>\n            {{task.content}}\n          </p>\n          <div id='terminal_{{task.title}}' class='terminal'> </div>\n        </ng-template>\n      </kendo-tabstrip-tab>\n    </kendo-tabstrip>\n    -->\n    <nz-tabset [nzType]=\"'card'\" [nzSelectedIndex]=\"tasks.length\">\n      <nz-tab *ngFor=\"let task of tasks\" >\n        <ng-template #nzTabHeading>\n          {{task.title}}\n          <i class=\"anticon anticon-cross\" (click)=\"closeTab(task)\"></i>\n        </ng-template>\n        <span>{{task.content}}</span>\n        <div id='terminal_parent' *ngIf=\"task.type === 'terminal'\">\n          <div id='terminal_{{task.taskId}}' class='terminal'> </div>\n        </div>\n        <div id='info_parent' *ngIf=\"task.type === 'info'\">\n          <div id='info_{{task.taskId}}' class='info'> \n            <InfoIframe [urlsrc]=\"task.title\" [urltype]=\"task.info\"></InfoIframe>\n          </div>\n        </div>\n      </nz-tab>\n    </nz-tabset>\n      ",
         styles: ["\n    #terminal_parent {\n      display: block;\n      position: relative;\n      overflow-x:auto;\n      white-space:nowrap;\n      width: 100%;\n      height: 630px;\n    }\n    .terminal {\n      display: block;\n      position: relative;\n      width: 800px;\n      height: 600px;\n      padding: 0px, 0px, 10px, 2px;\n    }\n    "],
         providers: []
     }),

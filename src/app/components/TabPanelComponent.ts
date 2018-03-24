@@ -45,7 +45,7 @@ declare var window:any;
         </div>
         <div id='info_parent' *ngIf="task.type === 'info'">
           <div id='info_{{task.taskId}}' class='info'> 
-            <InfoIframe [urlsrc]="task.title"></InfoIframe>
+            <InfoIframe [urlsrc]="task.title" [urltype]="task.info"></InfoIframe>
           </div>
         </div>
       </nz-tab>
@@ -172,8 +172,9 @@ declare var window:any;
               type: 'info',
               title: taskInfo['title'],
               taskId: taskId,
+              info: taskInfo['info'],
               content: `
-              Info about ${taskInfo['title']}
+              Info about ${taskInfo['title']} ${taskInfo['info']} 
               `,
               selected: true
             }
@@ -189,8 +190,9 @@ declare var window:any;
               type: 'terminal',
               title: taskInfo['title'],
               taskId: taskId,
+              info: '',
               content: `
-              terminal on ${taskInfo['title']}
+              terminal on ${taskInfo['title']} 
               `,
               selected: true
             }

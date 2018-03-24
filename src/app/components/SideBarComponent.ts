@@ -37,7 +37,8 @@ import { getService } from '../services/getService';
       <li nz-submenu>
         <span title><i class="anticon anticon-team"></i><span class="nav-text">帮助信息查询</span></span>
         <ul>
-          <li nz-menu-item (click)="onSelect('info', 'NED')">NED信息查询</li>
+          <li nz-menu-item (click)="onSelect('info', 'NED_local')">本地NED信息查询</li>
+          <li nz-menu-item (click)="onSelect('info', 'NED_remote')">远程NED信息查询</li>
           <li nz-submenu>
             <span title><i class="anticon anticon-user"></i><span class="nav-text">网元信息查询</span></span>
             <ul>
@@ -50,7 +51,8 @@ import { getService } from '../services/getService';
       <li nz-submenu>
         <span title><i class="anticon anticon-team"></i><span class="nav-text">其他系统接口</span></span>
         <ul>
-          <li nz-menu-item (click)="onSelect('info', 'FMA')">FMA系统</li>
+          <li nz-menu-item (click)="onSelect('info', 'FMA', 'local')">本地FMA系统</li>
+          <li nz-menu-item (click)="onSelect('info', 'FMA', 'remote')">远程FMA系统</li>
         </ul>
       </li>
     </ul>
@@ -235,11 +237,11 @@ import { getService } from '../services/getService';
       })
     }
 
-    onSelect(type, info) {
+    onSelect(type, info, option) {
       let taskInfo = {
         title: type==='terminal'?info.name:info,
         type: type,
-        info: info
+        info: option
       }
       this.tabContentService.announce(taskInfo);
     }
