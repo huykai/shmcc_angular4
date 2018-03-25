@@ -1880,7 +1880,7 @@ var SideBarComponent = (function () {
 SideBarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Component */])({
         selector: 'SideBarPanel',
-        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect('terminal', mme)\">{{mme.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect('terminal', saegw)\">{{saegw.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect('terminal', cg)\">{{cg.name}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5E2E\u52A9\u4FE1\u606F\u67E5\u8BE2</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED', 'local')\">\u672C\u5730NED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED', 'remote')\">\u8FDC\u7A0BNED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7F51\u5143\u4FE1\u606F\u67E5\u8BE2</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let doc of docs\" (click)=\"onSelect('info', doc)\">{{doc}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5176\u4ED6\u7CFB\u7EDF\u63A5\u53E3</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'local')\">\u672C\u5730FMA\u7CFB\u7EDF</li>\n          <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'remote')\">\u8FDC\u7A0BFMA\u7CFB\u7EDF</li>\n        </ul>\n      </li>\n    </ul>\n  ",
+        template: "\n    <div class=\"logo\">\n    </div>\n    <ul nz-menu [nzTheme]=\"'dark'\" [nzMode]=\"isCollapsed?'vertical':'inline'\">\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7EC8\u7AEF</span></span>\n        <ul>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">MME</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let mme of mmes\" (click)=\"onSelect('terminal', mme)\">{{mme.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">SAEGW</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let saegw of saegws\" (click)=\"onSelect('terminal', saegw)\">{{saegw.name}}</li>\n            </ul>\n          </li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">CG</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let cg of cgs\" (click)=\"onSelect('terminal', cg)\">{{cg.name}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5E2E\u52A9\u4FE1\u606F\u67E5\u8BE2</span></span>\n        <ul>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED', 'local')\">\u672C\u5730NED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-menu-item (click)=\"onSelect('info', 'NED', 'remote')\">\u8FDC\u7A0BNED\u4FE1\u606F\u67E5\u8BE2</li>\n          <li nz-submenu>\n            <span title><i class=\"anticon anticon-user\"></i><span class=\"nav-text\">\u7F51\u5143\u4FE1\u606F\u67E5\u8BE2</span></span>\n            <ul>\n              <li nz-menu-item *ngFor=\"let doc of docs\" (click)=\"onSelect('info', doc)\">{{doc}}\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li nz-submenu>\n        <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">\u5176\u4ED6\u7CFB\u7EDF\u63A5\u53E3</span></span>\n        <ul>\n          <li nz-submenu>\n          <span title><i class=\"anticon anticon-team\"></i><span class=\"nav-text\">FMA</span></span>\n          <ul>\n            <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'local')\">\u672C\u5730FMA\u7CFB\u7EDF</li>\n            <li nz-menu-item (click)=\"onSelect('info', 'FMA', 'remote')\">\u8FDC\u7A0BFMA\u7CFB\u7EDF</li>\n            <!--<li nz-menu-item >\u8FDC\u7A0BFMA\u7CFB\u7EDF\uFF08\u6682\u65E0\u6CD5\u4F7F\u7528\uFF09</li> -->\n          </ul>\n        </ul>\n      </li>\n    </ul>\n  ",
         styles: [],
         providers: []
     }),
@@ -1998,12 +1998,29 @@ var TabPanelComponent = (function () {
             console.log('TabPanelComponent announce received ', taskInfo);
             if (taskInfo['type'] === 'info') {
                 var taskId = taskInfo['title'] + Date.now();
+                var content = "\n            Info about " + taskInfo['title'] + " " + taskInfo['info'] + " \n            ";
+                if (taskInfo['title'] === 'NED') {
+                    if (taskInfo['info'] === 'remote') {
+                        content += ' Notice: 远程NED连接只能在移动网元内部网络环境下使用。';
+                    }
+                    else {
+                        content += ' Notice: 本地NED连接只有在已经在本机安装NED的情况下使用。本地NED的端口号应为9090.';
+                    }
+                }
+                else if (taskInfo['title'] === 'NED') {
+                    if (taskInfo['info'] === 'remote') {
+                        content += ' Notice: 远程FMA连接只能在移动网元内部网络环境下使用。。';
+                    }
+                    else {
+                        content += ' Notice: 本地FMA连接需要在本机做远程FMA的端口映射，localhost:51018映射到10.10.31.19:8080.';
+                    }
+                }
                 var newtask = {
                     type: 'info',
                     title: taskInfo['title'],
                     taskId: taskId,
                     info: taskInfo['info'],
-                    content: "\n              Info about " + taskInfo['title'] + " " + taskInfo['info'] + " \n              ",
+                    content: content,
                     selected: true
                 };
                 for (var _i = 0, _a = _this.tasks; _i < _a.length; _i++) {

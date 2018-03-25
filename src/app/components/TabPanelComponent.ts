@@ -168,14 +168,29 @@ declare var window:any;
           
           if (taskInfo['type'] === 'info') {
             let taskId = taskInfo['title'] + Date.now();
+            let content = `
+            Info about ${taskInfo['title']} ${taskInfo['info']} 
+            `;
+            if (taskInfo['title'] === 'NED') {
+              if (taskInfo['info'] === 'remote') {
+                content += ' Notice: 远程NED连接只能在移动网元内部网络环境下使用。'
+              } else {
+                content += ' Notice: 本地NED连接只有在已经在本机安装NED的情况下使用。本地NED的端口号应为9090.'
+              }
+            } else if (taskInfo['title'] === 'NED') {
+              if (taskInfo['info'] === 'remote') {
+                content += ' Notice: 远程FMA连接只能在移动网元内部网络环境下使用。。'
+              } else {
+                content += ' Notice: 本地FMA连接需要在本机做远程FMA的端口映射，localhost:51018映射到10.10.31.19:8080.'
+              }
+            }
+            
             let newtask = {
               type: 'info',
               title: taskInfo['title'],
               taskId: taskId,
               info: taskInfo['info'],
-              content: `
-              Info about ${taskInfo['title']} ${taskInfo['info']} 
-              `,
+              content: content,
               selected: true
             }
             for (let task of this.tasks){
