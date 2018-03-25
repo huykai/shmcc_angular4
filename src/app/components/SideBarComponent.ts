@@ -243,7 +243,9 @@ import { getService } from '../services/getService';
     }
 
     onSelect(type, info, option) {
-
+      if (!option) {
+        option = '';
+      }
       let taskInfo = {
         title: type==='terminal'?info.name:info,
         type: type,
