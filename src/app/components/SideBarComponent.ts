@@ -249,7 +249,7 @@ import { getService } from '../services/getService';
       let taskInfo = {
         title: type==='terminal'?info.name:info,
         type: type,
-        info: option
+        info: type==='terminal'?info:option
       }
       this.tabContentService.announce(taskInfo);
     }
