@@ -42,7 +42,8 @@ export class InfoIframeComponent {
             if (this.urltype === "local") {
                 this.url = "http://localhost:51018/FMANS17/login.xhtml";
             } else {
-                this.url = "/webs/fma/login.xhtml";
+                // this.url = "/webs/fma/login.xhtml";
+                this.url = "http://10.10.31.19:8080/FMANS17/login.xhtml";
             }
                 
         }

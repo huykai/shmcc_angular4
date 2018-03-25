@@ -177,7 +177,7 @@ declare var window:any;
               } else {
                 content += ' Notice: 本地NED连接只有在已经在本机安装NED的情况下使用。本地NED的端口号应为9090.'
               }
-            } else if (taskInfo['title'] === 'NED') {
+            } else if (taskInfo['title'] === 'FMA') {
               if (taskInfo['info'] === 'remote') {
                 content += ' Notice: 远程FMA连接只能在移动网元内部网络环境下使用。。'
               } else {
