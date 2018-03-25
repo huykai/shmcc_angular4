@@ -83,8 +83,8 @@ declare var window:any;
     }
     
     socket;
-    socket_location = "http://127.0.0.1:3000/";
-    // socket_location = location.origin;
+    // socket_location = "http://127.0.0.1:3000/";
+    socket_location = location.origin;
     terminal(taskInfo):any {
       console.log('taskInfo : ', taskInfo.host) ;
       var term;
